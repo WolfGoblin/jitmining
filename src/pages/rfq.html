@@ -1,0 +1,80 @@
+<!--meta
+title: Request a Quote — Copper, Manganese, Iron Ore & Gold | JIT Mining Zambia
+description: Submit a free RFQ to JIT Mining for copper cathode, concentrate or ore, manganese, iron ore or gold, FOB Zambia or CIF/CFR to your port.
+nav: rfq
+-->
+<section class="page-hero">
+  <div class="hero-bg" style="background-image:url(assets/img/haul-truck.jpg)"></div>
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Home</a> / Request a quote</div>
+    <span class="eyebrow on-dark rise d1">Free RFQ</span>
+    <h1 class="rise d2">Request a quote</h1>
+    <p class="lead rise d3">Tell us the product, grade, tonnage and destination. We'll confirm availability and send an offer — usually starting with a Full Corporate Offer (FCO).</p>
+  </div>
+</section>
+
+<section class="bone">
+  <div class="wrap">
+    <div class="form-shell reveal">
+      <div class="form-side">
+        <span class="eyebrow on-dark">Sales desk · Kitwe</span>
+        <h2 style="font-size:clamp(1.8rem,3vw,2.6rem)">Submit your RFQ — free</h2>
+        <p>Every enquiry is reviewed by our team. Helpful to include: your LOI or company information sheet, target price basis, and loading schedule.</p>
+        <div class="contact-line">[[i:wa]]<span><a href="[[wa:Hello JIT Mining, I would like a quotation.]]" target="_blank" rel="noopener">Quick WhatsApp quote</a><br><small>{{phone_display}}</small></span></div>
+        <div class="contact-line">[[i:mail]]<a href="mailto:{{email}}">{{email}}</a></div>
+        <div class="contact-line">[[i:layers]]<span>Minimum order 500 MT (gold negotiated per lot)</span></div>
+        <div class="contact-line">[[i:flask]]<span>SGS / Bureau Veritas inspection at loading, paid by us</span></div>
+        <div class="contact-line">[[i:lock]]<span>Your enquiry and company details are kept confidential.</span></div>
+      </div>
+      <div class="form-main">
+        <form data-mailto="Mineral RFQ — website enquiry" novalidate>
+          <div class="fgrid">
+            <div><label for="r-name">Full name <span class="req">*</span></label><input id="r-name" name="name" data-label="Name" required autocomplete="name"></div>
+            <div><label for="r-email">Company email <span class="req">*</span></label><input id="r-email" type="email" name="email" data-label="Email" required autocomplete="email"></div>
+            <div><label for="r-phone">WhatsApp / phone</label><input id="r-phone" type="tel" name="phone" data-label="Phone" autocomplete="tel" placeholder="+260 …"></div>
+            <div><label for="r-country">Buyer country <span class="req">*</span></label><input id="r-country" name="country" data-label="Country" required autocomplete="country-name"></div>
+            <div class="full"><label for="r-company">Company / trading house <span class="req">*</span></label><input id="r-company" name="company" data-label="Company" required autocomplete="organization"></div>
+            <div><label for="r-product">Product <span class="req">*</span></label>
+              <select id="r-product" name="product" data-label="Product" required>
+                <option value="">Choose a product</option>
+                <option>Copper Cathode (99.99%)</option><option>Copper Concentrate (Cu 35%)</option><option>Copper Ore (Cu 20–25%)</option><option>Manganese Ore (Mn 52–67%)</option><option>Iron Ore (Fe 62%)</option><option>Gold (Au 96–99.99%)</option><option>Other (specify below)</option>
+              </select></div>
+            <div><label for="r-qty">Quantity (MT) <span class="req">*</span></label><input id="r-qty" name="quantity" data-label="Quantity (MT)" required inputmode="numeric" placeholder="Min. 500"></div>
+            <div><label for="r-terms">Delivery term</label>
+              <select id="r-terms" name="incoterm" data-label="Incoterm"><option>FOB Zambia</option><option>CIF (destination port below)</option><option>CFR (destination port below)</option><option>Not sure yet</option></select></div>
+            <div><label for="r-freq">Order type</label>
+              <select id="r-freq" name="frequency" data-label="Order type"><option>One-off / trial</option><option>Monthly contract</option><option>Annual contract</option></select></div>
+            <div class="full"><label for="r-notes">Specification, destination port &amp; schedule</label><textarea id="r-notes" name="notes" data-label="Notes" placeholder="Grade, packing, destination port, required loading dates…"></textarea></div>
+          </div>
+          <div class="form-foot">
+            <button class="btn orange" type="submit">Submit RFQ [[i:arrow]]</button>
+            <button class="btn wa" type="button" data-wa-send>[[i:wa]] Send via WhatsApp</button>
+            <small>Please attach your LOI or company profile to the email that opens.</small>
+          </div>
+          <div class="form-status" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head center reveal"><span class="eyebrow">What happens next</span><h2>After you submit</h2></div>
+    <div class="steps light-steps">
+      <div class="step reveal"><span class="n">01</span><h3>We review</h3><p>Our desk checks availability against your product, grade and tonnage.</p></div>
+      <div class="step reveal" data-delay="60"><span class="n">02</span><h3>LOI &amp; FCO</h3><p>On receipt of your LOI we issue a Full Corporate Offer with specifications, pricing and terms.</p></div>
+      <div class="step reveal" data-delay="120"><span class="n">03</span><h3>SPA &amp; site visit</h3><p>Contracts are drafted and you're invited to Zambia to inspect before the ICPO.</p></div>
+    </div>
+    <div class="center mt-2"><a class="link-arrow" href="due-diligence.html#procedure">See the full 7-step procedure →</a></div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var p = new URLSearchParams(location.search).get("product");
+    if (!p) return;
+    var sel = document.getElementById("r-product");
+    for (var i = 0; i < sel.options.length; i++) if (sel.options[i].text.toLowerCase().indexOf(p.toLowerCase()) === 0) sel.selectedIndex = i;
+  })();
+</script>

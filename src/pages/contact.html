@@ -1,0 +1,72 @@
+<!--meta
+title: Contact JIT Mining — Kitwe, Zambia
+description: Contact JIT Mining & General Contractors at Plot No. 1345, Industrial Area, Kitwe 50100, Zambia. Tel / WhatsApp +260 961 481 874, info@jitmining.com.
+nav: contact
+-->
+<section class="page-hero">
+  <div class="hero-bg" style="background-image:url(assets/img/hero-underground.jpg)"></div>
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Home</a> / Contact</div>
+    <span class="eyebrow on-dark rise d1">Contact us</span>
+    <h1 class="rise d2">Talk to our desk in Kitwe</h1>
+    <p class="lead rise d3">Ready to explore opportunities in Africa's mining sector? Tell us about your project or order and we'll show you how we can help.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid g3 contact-cards">
+      <div class="card reveal"><div class="ico">[[i:mail]]</div><h3>Email</h3><p>Orders, RFQs and general enquiries.<a class="big" href="mailto:{{email}}">{{email}}</a></p></div>
+      <div class="card reveal" data-delay="80"><div class="ico">[[i:phone]]</div><h3>Phone &amp; WhatsApp</h3><p>Call or message our sales desk.<a class="big" href="tel:{{phone}}">{{phone_display}}</a><a href="[[wa:Hello JIT Mining, I would like to make an enquiry.]]" target="_blank" rel="noopener">Open WhatsApp chat →</a></p></div>
+      <div class="card reveal" data-delay="160"><div class="ico">[[i:pin]]</div><h3>Head office</h3><p>{{address}}<br>{{city}} {{zip}}<br>{{country}}</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bone">
+  <div class="wrap">
+    <div class="form-shell reveal">
+      <div class="form-side">
+        <span class="eyebrow on-dark">Send us a message</span>
+        <h2 style="font-size:clamp(1.8rem,3vw,2.6rem)">We'll get back to you</h2>
+        <p>Use the form for any enquiry — mineral orders, supplier verification, mining services or partnerships.</p>
+        <div class="contact-line">[[i:pin]]<span>{{address}}<br>{{city}} {{zip}}, {{country}}</span></div>
+        <div class="contact-line">[[i:phone]]<a href="tel:{{phone}}">{{phone_display}}</a></div>
+        <div class="contact-line">[[i:mail]]<a href="mailto:{{email}}">{{email}}</a></div>
+      </div>
+      <div class="form-main">
+        <form data-mailto="Website enquiry" novalidate>
+          <div class="fgrid">
+            <div><label for="c-name">Full name <span class="req">*</span></label><input id="c-name" name="name" data-label="Name" required autocomplete="name"></div>
+            <div><label for="c-email">Email <span class="req">*</span></label><input id="c-email" type="email" name="email" data-label="Email" required autocomplete="email"></div>
+            <div><label for="c-phone">Phone / WhatsApp</label><input id="c-phone" type="tel" name="phone" data-label="Phone" autocomplete="tel"></div>
+            <div><label for="c-company">Company</label><input id="c-company" name="company" data-label="Company" autocomplete="organization"></div>
+            <div class="full"><label for="c-subject">Subject</label>
+              <select id="c-subject" name="subject" data-label="Subject">
+                <option>Mineral purchase</option><option>Supplier verification</option><option>Mining services</option><option>Logistics &amp; warehousing</option><option>Partnership / investment</option><option>Other</option>
+              </select></div>
+            <div class="full"><label for="c-msg">Message <span class="req">*</span></label><textarea id="c-msg" name="message" data-label="Message" required></textarea></div>
+          </div>
+          <div class="form-foot">
+            <button class="btn orange" type="submit">Send message [[i:arrow]]</button>
+            <button class="btn wa" type="button" data-wa-send>[[i:wa]] Send via WhatsApp</button>
+          </div>
+          <div class="form-status" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:0">
+  <iframe class="map-frame" title="Map of Kitwe industrial area, Zambia" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Industrial+Area,+Kitwe,+Zambia&output=embed"></iframe>
+</section>
+
+<script>
+  (function () {
+    var s = new URLSearchParams(location.search).get("subject");
+    if (!s) return;
+    var sel = document.getElementById("c-subject");
+    for (var i = 0; i < sel.options.length; i++) if (sel.options[i].text.toLowerCase() === s.toLowerCase()) sel.selectedIndex = i;
+  })();
+</script>
